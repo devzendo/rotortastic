@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/devzendo/rotortastic/issues"
   },
-  "homepage": "https://github.com/devzendo/rotortastic#readme"
+  "homepage": "https://github.com/devzendo/rotortastic#readme",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
 }

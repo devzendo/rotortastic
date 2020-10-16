@@ -1,8 +1,18 @@
+# misc
 .DS_Store
-*.iml
-.idea
-.idea/
 **/target/
 **/*.*~
 **/*.swp
 
+# IDEs
+*.iml
+.idea
+.idea/
+/.vscode
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+/reports

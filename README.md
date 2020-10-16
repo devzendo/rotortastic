@@ -27,6 +27,12 @@ http://www.gumbley.me.uk/mr/algo.html .
 
 If you're looking for a 'proper' encrypted web notebook, see https://standardnotes.org/ .
 
+Structure
+---------
+I didn't use create-react-app to start the project, I laid it out manually as
+recommended in 'Learn React With Typescript 3' by Carl Rippon, Packt Publishers.
+"This will start to give us an understanding of what needs to happen when React and TypeScript apps are packaged up".
+
 
 (C) 2020 Matt J. Gumbley
 matt.gumbley@devzendo.org
