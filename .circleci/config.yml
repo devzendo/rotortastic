@@ -12,32 +12,32 @@ jobs:
     executor: node_executor
     steps:
       - run:
-        name: Check node and npm versions
-        command: |
-          node --version
-          npm --version
+          name: Check node and npm versions
+          command: |
+            node --version
+            npm --version
       - checkout
       - run:
-        name: Setup
-        command: |
-          sudo apt-get update && sudo apt-get install python python-pip libpython-dev jq
-          sudo pip install awscli
+          name: Setup
+          command: |
+            sudo apt-get update && sudo apt-get install python python-pip libpython-dev jq
+            sudo pip install awscli
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
-        name: Install
-        command: npm install
+          name: Install
+          command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
       - run:
-        name: Test
-        command: npm run test
+          name: Test
+          command: npm run test
       - store_test_results:
-        path: './reports/junit'
+          path: './reports/junit'
       - store_artifacts:
-        path: './coverage'
+          path: './coverage'
   build-and-publish-to-development:
     executor: node_executor
     steps:
