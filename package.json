@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src --ext .ts,tsx",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --env development",
     "build:dev": "webpack --env development",
