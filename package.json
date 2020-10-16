@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --env development",
+    "build:dev": "webpack --env development",
+    "build:prod": "webpack --env production"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
+    "@webpack-cli/serve": "^1.0.1-alpha.5",
     "eslint": "^7.11.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.21.4",
