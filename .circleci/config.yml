@@ -39,10 +39,11 @@ jobs:
           path: './reports/junit'
       - store_artifacts:
           path: './coverage'
+
   build-and-publish-to-development:
     executor: node_executor
     steps:
-      - checkout:
+      - checkout
       - run:
           name: Setup
           command: |
