@@ -3,6 +3,7 @@
 **/target/
 **/*.*~
 **/*.swp
+aws-credentials.json
 
 # IDEs
 *.iml
