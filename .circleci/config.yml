@@ -48,7 +48,7 @@ jobs:
           name: Setup
           command: |
             sudo apt-get update && sudo apt-get install python python-pip libpython-dev jq
-            sudo pip install aws-cli
+            sudo pip install awscli
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
