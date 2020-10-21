@@ -36,9 +36,9 @@ jobs:
           name: Test
           command: npm run test
       - store_test_results:
-          path: './reports/junit'
+          path: "./reports/junit"
       - store_artifacts:
-          path: './coverage'
+          path: "./coverage"
 
   build-and-publish-to-development:
     executor: node_executor
