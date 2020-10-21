@@ -1,8 +1,6 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react"
+import * as ReactDOM from "react-dom"
 
-const App: React.FunctionComponent = () => {
-  return <h1>rotortastic</h1>;
-};
+import { App } from "./app"
 
-ReactDOM.render(<App />, document.getElementById('root') as HTMLElement);
+ReactDOM.render(<App />, document.getElementById("root") as HTMLElement)
