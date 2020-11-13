@@ -54,9 +54,6 @@ jobs:
       - run:
           name: Install
           command: npm install
-      - run:
-          name: Install global dependencies
-          command: npm install -g s3-upload
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
