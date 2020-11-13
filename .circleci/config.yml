@@ -44,11 +44,11 @@ jobs:
     executor: node_executor
     steps:
       - checkout
-      - run:
-          name: Setup
-          command: |
-            sudo apt-get update && sudo apt-get install python python-pip libpython-dev jq
-            sudo pip install awscli
+#      - run:
+#          name: Setup
+#          command: |
+#            sudo apt-get update && sudo apt-get install python python-pip libpython-dev jq
+#            sudo pip install awscli
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -63,8 +63,8 @@ jobs:
           command: |
             npm run build:dev
             # npm run storybook:build:dev
-      - store_artifacts:
-          path: build
+#      - store_artifacts:
+#          path: build
       - run:
           name: Deploy to development
           command: |
