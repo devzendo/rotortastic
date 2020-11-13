@@ -54,6 +54,9 @@ jobs:
       - run:
           name: Install
           command: npm install
+      - run:
+          name: Install global dependencies
+          command: npm install -g s3-upload
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -68,14 +71,18 @@ jobs:
       - run:
           name: Deploy to development
           command: |
-            cat \<< EOF > aws-credentials.json
+            cat \<< EOF > dist/aws-credentials.json
             {
               "accessKeyId": "${AWS_ACCESS_KEY_ID}",
               "secretAccessKey": "${AWS_SECRET_ACCESS_KEY}",
               "region": "${AWS_DEFAULT_REGION}"
             }
             EOF
-            npm run deploy:dev
+            # s3-upload has to be run from the directory containing the aws-upload.conf.js file but I want the files
+            # in the S3 bucket to be placed directly there, not in a 'dist' folder, so the files in the config file
+            # should not be prefixed with 'dist', and the two config files are now copied to dist...
+            cp aws-upload.conf.js dist
+            (cd dist && s3-upload)
 
 workflows:
   version: 2
