@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Deploy to development
           command: |
-            cat << EOF > aws-credentials.json
+            cat \<< EOF > aws-credentials.json
             {
               "accessKeyId": "${AWS_ACCESS_KEY_ID}",
               "secretAccessKey": "${AWS_SECRET_ACCESS_KEY}",
