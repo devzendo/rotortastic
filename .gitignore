@@ -17,3 +17,6 @@ aws-credentials.json
 # testing
 /coverage
 /reports
+
+# built files
+dist/bundle*

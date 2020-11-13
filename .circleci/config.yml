@@ -65,10 +65,17 @@ jobs:
             # npm run storybook:build:dev
       - store_artifacts:
           path: build
-      #- run:
-      #    name: Deploy to development
-      #    command: |
-      #      npm run deploy:dev
+      - run:
+          name: Deploy to development
+          command: |
+            cat << EOF > aws-credentials.json
+            {
+              "accessKeyId": "${AWS_ACCESS_KEY_ID}",
+              "secretAccessKey": "${AWS_SECRET_ACCESS_KEY}",
+              "region": "${AWS_DEFAULT_REGION}"
+            }
+            EOF
+            npm run deploy:dev
 
 workflows:
   version: 2
