@@ -82,7 +82,7 @@ jobs:
             # in the S3 bucket to be placed directly there, not in a 'dist' folder, so the files in the config file
             # should not be prefixed with 'dist', and the two config files are now copied to dist...
             cp aws-upload.conf.js dist
-            (cd dist && s3-upload)
+            (cd dist && npx s3-upload)
 
 workflows:
   version: 2
