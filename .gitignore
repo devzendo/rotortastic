@@ -4,6 +4,14 @@
 **/*.*~
 **/*.swp
 aws-credentials.json
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # IDEs
 *.iml
@@ -13,6 +21,8 @@ aws-credentials.json
 
 # dependencies
 /node_modules
+/.pnp
+.pnp.js
 
 # testing
 /coverage
@@ -20,3 +30,7 @@ aws-credentials.json
 
 # built files
 dist/bundle*
+
+# production
+/build
+
