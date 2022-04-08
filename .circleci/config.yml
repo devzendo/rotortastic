@@ -4,7 +4,7 @@ version: 2.1
 executors:
   node_executor:
     docker:
-      - image: circleci/node:12.14.1
+      - image: cimg/node:14.17.5
     environment:
       AWS_DEFAULT_REGION: eu-west-2
 
