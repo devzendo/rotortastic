@@ -29,9 +29,12 @@ If you're looking for a 'proper' encrypted web notebook, see https://standardnot
 
 ## Structure
 
-I didn't use create-react-app to start the project, I laid it out manually as
+I started without create-react-app to start the project, I laid it out manually as
 recommended in 'Learn React With Typescript 3' by Carl Rippon, Packt Publishers.
 "This will start to give us an understanding of what needs to happen when React and TypeScript apps are packaged up".
+This very rapidly became painful; so changed to CRA. The Pragmatic Programmer suggests one should
+"avoid evil wizards", but the alternative here is to grok an arcane dark art that's clearly the spawn of
+Beelzebub. Those who don't understand Maven will be forced to re-implement it, poorly. Indeed.
 
 (C) 2020 Matt J. Gumbley
 matt.gumbley@devzendo.org
