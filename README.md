@@ -36,6 +36,6 @@ This very rapidly became painful; so changed to CRA. The Pragmatic Programmer su
 "avoid evil wizards", but the alternative here is to grok an arcane dark art that's clearly the spawn of
 Beelzebub. Those who don't understand Maven will be forced to re-implement it, poorly. Indeed.
 
-(C) 2020 Matt J. Gumbley
+(C) 2020-2022 Matt J. Gumbley
 matt.gumbley@devzendo.org
 @mattgumbley @devzendo
